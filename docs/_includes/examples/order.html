@@ -1,0 +1,23 @@
+<h3>Order</h3>
+<h4>Forward</h4>
+<div class="grid" grid-spacing="gutters" grid-order="forward">
+	{% for i in (1..3) %}
+		<div column><div class="box">{{i}}</div></div>
+	{% endfor %}
+</div>
+<div class="grid" grid-spacing="gutters" grid-direction="column" grid-order="forward">
+	{% for i in (1..3) %}
+		<div column><div class="box">{{i}}</div></div>
+	{% endfor %}
+</div>
+<h4>Reverse</h4>
+<div class="grid" grid-spacing="gutters" grid-order="reverse">
+	{% for i in (1..3) %}
+		<div column><div class="box">{{i}}</div></div>
+	{% endfor %}
+</div>
+<div class="grid" grid-spacing="gutters" grid-direction="column" grid-order="reverse">
+	{% for i in (1..3) %}
+		<div column><div class="box">{{i}}</div></div>
+	{% endfor %}
+</div>

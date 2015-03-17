@@ -1,0 +1,12 @@
+<h2>Auto sizing</h2>
+<div class="grid" grid-spacing="gutters">
+	{% for i in (1..6) %}
+		<div column><div class="box"></div></div>
+	{% endfor %}
+</div>
+<div class="grid" grid-spacing="gutters">
+	<div column="6"><div class="box"></div></div>
+	{% for i in (1..5) %}
+		<div column><div class="box"></div></div>
+	{% endfor %}
+</div>

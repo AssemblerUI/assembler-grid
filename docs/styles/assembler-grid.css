@@ -1,0 +1,1064 @@
+/* ======================================================== */
+/*                         THE BASICS                       */
+/* ======================================================== */
+/*
+ * parent container to signify its a Grid
+ * this is synonymous for a row, or collection of columns
+ * there is no need to specify a parent class on the entire
+ * page or page container
+ */
+/* line 11, ../../src/sass/grid/_basics.scss */
+.grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+}
+
+/*
+ * the child attribute selector
+ * can be an empty attribute to allow for auto-sizing or
+ * include the subdivision of units as per the $column
+ * setting at the top
+ * this means if you want a column that is 1/2 the
+ * parent width, and the $columns is set to the default
+ * of 12, then you'd set the attribute to 6 (12 columns / 2)
+ */
+/* line 32, ../../src/sass/grid/_basics.scss */
+[column],
+[prefix],
+[suffix],
+[push],
+[pull] {
+  box-sizing: border-box;
+  display: flex;
+  flex-basis: 0%;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+/* line 49, ../../src/sass/grid/_basics.scss */
+[push],
+[pull] {
+  position: relative;
+}
+
+/*
+ * If you want to hide a column, then set the unit to '0'
+ * and it won't show on the default mobile view.  This can
+ * be overridden on any other responsive view
+ */
+/* line 59, ../../src/sass/grid/_basics.scss */
+[column="0"] {
+  display: none;
+}
+
+/*
+ * loop through the grid columns setting to create the
+ * percentages necessary to divide the page up evenly
+ */
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="1"] {
+  flex-basis: 8.33333%;
+  max-width: 8.33333%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="1"] {
+  margin-left: 8.33333%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="1"] {
+  margin-right: 8.33333%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="1"] {
+  left: 8.33333%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="1"] {
+  left: -8.33333%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="2"] {
+  flex-basis: 16.66667%;
+  max-width: 16.66667%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="2"] {
+  margin-left: 16.66667%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="2"] {
+  margin-right: 16.66667%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="2"] {
+  left: 16.66667%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="2"] {
+  left: -16.66667%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="3"] {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="3"] {
+  margin-left: 25%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="3"] {
+  margin-right: 25%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="3"] {
+  left: 25%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="3"] {
+  left: -25%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="4"] {
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="4"] {
+  margin-left: 33.33333%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="4"] {
+  margin-right: 33.33333%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="4"] {
+  left: 33.33333%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="4"] {
+  left: -33.33333%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="5"] {
+  flex-basis: 41.66667%;
+  max-width: 41.66667%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="5"] {
+  margin-left: 41.66667%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="5"] {
+  margin-right: 41.66667%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="5"] {
+  left: 41.66667%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="5"] {
+  left: -41.66667%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="6"] {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="6"] {
+  margin-left: 50%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="6"] {
+  margin-right: 50%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="6"] {
+  left: 50%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="6"] {
+  left: -50%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="7"] {
+  flex-basis: 58.33333%;
+  max-width: 58.33333%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="7"] {
+  margin-left: 58.33333%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="7"] {
+  margin-right: 58.33333%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="7"] {
+  left: 58.33333%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="7"] {
+  left: -58.33333%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="8"] {
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="8"] {
+  margin-left: 66.66667%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="8"] {
+  margin-right: 66.66667%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="8"] {
+  left: 66.66667%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="8"] {
+  left: -66.66667%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="9"] {
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="9"] {
+  margin-left: 75%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="9"] {
+  margin-right: 75%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="9"] {
+  left: 75%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="9"] {
+  left: -75%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="10"] {
+  flex-basis: 83.33333%;
+  max-width: 83.33333%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="10"] {
+  margin-left: 83.33333%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="10"] {
+  margin-right: 83.33333%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="10"] {
+  left: 83.33333%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="10"] {
+  left: -83.33333%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="11"] {
+  flex-basis: 91.66667%;
+  max-width: 91.66667%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="11"] {
+  margin-left: 91.66667%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="11"] {
+  margin-right: 91.66667%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="11"] {
+  left: 91.66667%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="11"] {
+  left: -91.66667%;
+}
+
+/* line 69, ../../src/sass/grid/_basics.scss */
+[column~="12"] {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+/* line 77, ../../src/sass/grid/_basics.scss */
+[prefix~="12"] {
+  margin-left: 100%;
+}
+
+/* line 80, ../../src/sass/grid/_basics.scss */
+[suffix~="12"] {
+  margin-right: 100%;
+}
+
+/* line 83, ../../src/sass/grid/_basics.scss */
+[push~="12"] {
+  left: 100%;
+}
+
+/* line 86, ../../src/sass/grid/_basics.scss */
+[pull~="12"] {
+  left: -100%;
+}
+
+/* ======================================================== */
+/*                          SPACING                         */
+/* ======================================================== */
+/*
+ * All of the following settings are set on the row/parent
+ * of the columns.
+ */
+/*
+ * gives you calculated spacing around each column
+ */
+/* line 12, ../../src/sass/grid/_spacing.scss */
+[grid-spacing~="gutters"] {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+/* line 15, ../../src/sass/grid/_spacing.scss */
+[grid-spacing~="gutters"] > [column] {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/*
+ * this is not required but available in case you need
+ * to reset spacing on a nested grid or something
+ */
+/* line 24, ../../src/sass/grid/_spacing.scss */
+[grid-spacing="none"] > [column] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*
+ * provided for situations where you have floating columns
+ * such as in a 12 grid system, and you have only enough
+ * content boxes to fill 6 columns, you might want them
+ * evenly spaced out, this provides spacing on both sides
+ * of each column
+ */
+/* line 36, ../../src/sass/grid/_spacing.scss */
+[grid-spacing="even"] > [column] {
+  justify-content: space-around;
+}
+
+/*
+ * provided for situations where you have floating columns
+ * such as in a 12 grid system, and you have only enough
+ * content boxes to fill 6 columns, you might want them
+ * evenly spaced out, this only provides spacing in between
+ * the columns, leaving the first and last columns flush
+ */
+/* line 48, ../../src/sass/grid/_spacing.scss */
+[grid-spacing="justify"] > [column] {
+  justify-content: space-between;
+}
+
+/* ======================================================== */
+/*                         DIRECTION                        */
+/* ======================================================== */
+/*
+ * All of the following settings are set on the row/parent
+ * of the columns.
+ */
+/* line 10, ../../src/sass/grid/_direction.scss */
+[grid-direction="row"] {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* line 14, ../../src/sass/grid/_direction.scss */
+[grid-direction="column"] {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* ======================================================== */
+/*                           ORDER                          */
+/* ======================================================== */
+/*
+ * All of the following settings are set on the row/parent
+ * of the columns.
+ */
+/*
+ * Reverse order of the row
+ */
+/* line 13, ../../src/sass/grid/_order.scss */
+[grid-order="reverse"] {
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+/* line 17, ../../src/sass/grid/_order.scss */
+[grid-direction="column"][grid-order="reverse"] {
+  flex-direction: column-reverse;
+}
+
+/*
+ * Reset the order back to normal
+ */
+/* line 25, ../../src/sass/grid/_order.scss */
+[grid-order="forward"] {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* line 29, ../../src/sass/grid/_order.scss */
+[grid-direction="column"][grid-order="forward"] {
+  flex-direction: column;
+}
+
+/* @TODO: support different devices sizes
+ * so you can have a different item show up first or last
+ */
+/*
+ * used on the column
+ * allows you to move any item to the first in the list
+ */
+/* line 42, ../../src/sass/grid/_order.scss */
+[order="first"] {
+  order: -1;
+}
+
+/*
+ * used on the column
+ * allows you to move any item to the last in the list
+ */
+/* line 51, ../../src/sass/grid/_order.scss */
+[order="last"] {
+  order: 1;
+}
+
+/* ======================================================== */
+/*                         ALIGNMENT                        */
+/* ======================================================== */
+/*
+ * All of the following settings can be set on the row/parent
+ * of the columns, or the children
+ */
+/* line 9, ../../src/sass/grid/_alignment.scss */
+[grid-alignment="top"] {
+  align-items: flex-start;
+}
+
+/* line 12, ../../src/sass/grid/_alignment.scss */
+[grid-alignment="middle"] {
+  align-items: center;
+}
+
+/* line 15, ../../src/sass/grid/_alignment.scss */
+[grid-alignment="bottom"] {
+  align-items: flex-end;
+}
+
+/* line 18, ../../src/sass/grid/_alignment.scss */
+[grid-alignment="baseline"] {
+  align-items: baseline;
+}
+
+/* line 21, ../../src/sass/grid/_alignment.scss */
+[grid-alignment="stretch"] {
+  align-items: stretch;
+}
+
+/* line 24, ../../src/sass/grid/_alignment.scss */
+[grid-alignment="start"] {
+  justify-content: flex-start;
+  text-align: flex-start;
+}
+
+/* line 28, ../../src/sass/grid/_alignment.scss */
+[grid-alignment="center"] {
+  justify-content: center;
+  text-align: center;
+}
+
+/* line 32, ../../src/sass/grid/_alignment.scss */
+[grid-alignment="end"] {
+  justify-content: flex-end;
+  text-align: flex-end;
+}
+
+/* line 36, ../../src/sass/grid/_alignment.scss */
+[alignment="top"] {
+  align-self: flex-start;
+}
+
+/* line 39, ../../src/sass/grid/_alignment.scss */
+[alignment="middle"] {
+  align-self: center;
+}
+
+/* line 42, ../../src/sass/grid/_alignment.scss */
+[alignment="bottom"] {
+  align-self: flex-end;
+}
+
+/* line 45, ../../src/sass/grid/_alignment.scss */
+[alignment="baseline"] {
+  align-self: baseline;
+}
+
+/* line 48, ../../src/sass/grid/_alignment.scss */
+[alignment="stretch"] {
+  align-self: stretch;
+}
+
+/* ======================================================== */
+/*                         RESPONSIVE                       */
+/* ======================================================== */
+/*
+ * mobile support => stack them by default
+ * tablet support => 8 2 2 for columns
+ * laptop support => 6 4 2 for columns
+ * desktop support => 2 8 1 for columns
+ * presentation support => 0 12 0 for columns
+ *
+ * <div class="grid" grid-spacing="gutters between">
+ *   <div column="12 small="8" medium="6" large="3" xlarge="0" />
+ *   <div column="12 small="2" medium="4" large="8" xlarge="12" />
+ *   <div column="12 small="4" medium="2" large="1" xlarge="0" />
+ * </div>
+ */
+@media (min-width: 319px) {
+  /* line 19, ../../src/sass/grid/_responsive.scss */
+  [xsmall="0"] {
+    display: none;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="1"] {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="2"] {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="3"] {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="4"] {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="5"] {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="6"] {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="7"] {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="8"] {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="9"] {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="10"] {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="11"] {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xsmall~="12"] {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 479px) {
+  /* line 19, ../../src/sass/grid/_responsive.scss */
+  [small="0"] {
+    display: none;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="1"] {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="2"] {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="3"] {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="4"] {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="5"] {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="6"] {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="7"] {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="8"] {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="9"] {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="10"] {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="11"] {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [small~="12"] {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  /* line 19, ../../src/sass/grid/_responsive.scss */
+  [medium="0"] {
+    display: none;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="1"] {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="2"] {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="3"] {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="4"] {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="5"] {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="6"] {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="7"] {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="8"] {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="9"] {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="10"] {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="11"] {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [medium~="12"] {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 19, ../../src/sass/grid/_responsive.scss */
+  [large="0"] {
+    display: none;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="1"] {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="2"] {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="3"] {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="4"] {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="5"] {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="6"] {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="7"] {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="8"] {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="9"] {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="10"] {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="11"] {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [large~="12"] {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1223px) {
+  /* line 19, ../../src/sass/grid/_responsive.scss */
+  [xlarge="0"] {
+    display: none;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="1"] {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="2"] {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="3"] {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="4"] {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="5"] {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="6"] {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="7"] {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="8"] {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="9"] {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="10"] {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="11"] {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xlarge~="12"] {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1823px) {
+  /* line 19, ../../src/sass/grid/_responsive.scss */
+  [xxlarge="0"] {
+    display: none;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="1"] {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="2"] {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="3"] {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="4"] {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="5"] {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="6"] {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="7"] {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="8"] {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="9"] {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="10"] {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="11"] {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+
+  /* line 24, ../../src/sass/grid/_responsive.scss */
+  [xxlarge~="12"] {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=assembler-grid.css.map */

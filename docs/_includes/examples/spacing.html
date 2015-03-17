@@ -1,0 +1,39 @@
+<h3>Spacing</h3>
+<h4>None (default)</h4>
+<div class="grid" grid-spacing="none">
+	<div column="12"><div class="box">12</div></div>
+	{% for i in (1..2) %}
+		<div column="6"><div class="box">6</div></div>
+	{% endfor %}
+	{% for i in (1..3) %}
+		<div column="4"><div class="box">4</div></div>
+	{% endfor %}
+	{% for i in (1..4) %}
+		<div column="3"><div class="box">3</div></div>
+	{% endfor %}
+	{% for i in (1..6) %}
+		<div column="2"><div class="box">2</div></div>
+	{% endfor %}
+	{% for i in (1..12) %}
+		<div column="1"><div class="box">1</div></div>
+	{% endfor %}
+</div>
+<h4>Gutters</h4>
+<div class="grid" grid-spacing="gutters">
+	<div column="12"><div class="box">12</div></div>
+	{% for i in (1..2) %}
+		<div column="6"><div class="box">6</div></div>
+	{% endfor %}
+	{% for i in (1..3) %}
+		<div column="4"><div class="box">4</div></div>
+	{% endfor %}
+	{% for i in (1..4) %}
+		<div column="3"><div class="box">3</div></div>
+	{% endfor %}
+	{% for i in (1..6) %}
+		<div column="2"><div class="box">2</div></div>
+	{% endfor %}
+	{% for i in (1..12) %}
+		<div column="1"><div class="box">1</div></div>
+	{% endfor %}
+</div>

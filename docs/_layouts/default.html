@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta, title, CSS, favicons, etc. -->
+		{% include meta.html %}
+		<style>
+			body {
+				margin: 0 auto;
+				padding: 1rem;
+				font-family: 'Avenir Next', Helvetica;
+			}
+			code {
+				font-family: monaco;
+			}
+			footer {
+				text-align: center;
+			}
+			footer ul {
+				padding-left: 0;
+			}
+			footer li {
+				display: inline-block;
+				list-style: none;
+			}
+			footer li::after {
+				margin-left: 3px;
+				content: '\2022';
+			}
+			footer li:last-child::after {
+				content: none;
+			}
+			.grid .box {
+				width: 100%;
+				box-sizing: border-box;
+				border-radius: 3px;
+				margin: 1rem 0;
+				padding: 1rem;
+				color: rgb(255,255,255);
+				background-color: rgb(0,127,255);
+				text-align: center;
+			}
+			.grid .grid .box { background-color: rgb(0,102,204); }
+			.grid .grid .grid .box { background-color: rgb(0,51,102); }
+			.large { height: 8rem; }
+			[push] .box {
+				background-color: rgb(255,0,127) !important;
+			}
+			[pull] .box {
+				background-color: rgb(0,255,127) !important;
+			}
+			.sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				margin: -1px;
+				padding: 0;
+				overflow: hidden;
+				clip: rect(0,0,0,0);
+				border: 0;
+			}
+			.sr-only-focusable:active,
+			.sr-only-focusable:focus {
+				position: static;
+				width: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				clip: auto;
+			}
+			h1 {
+				font-weight: 400;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<a class="sr-only sr-only-focusable" href="#main"><span class="skiplink-text">Skip to main content</span></a>
+		<h1 id="header">Assembler Grid</h1>
+		<main id="main" class="{{ page.class}}" role="main" tabindex="-1">
+			{{ content }}
+		</main>
+		{% include footer.html %}
+	</body>
+</html>
