@@ -1,7 +1,7 @@
 {
   "name": "assembler-grid",
   "description": "A grid component built for the assembler framework",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "keywords": [
     "responsive",
     "fixed-width",
