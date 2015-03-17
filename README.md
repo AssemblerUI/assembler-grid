@@ -1,4 +1,4 @@
-# assembler-grid Grid
+# assembler-grid
 
 A grid component built for the Assembler framework.
 
@@ -32,7 +32,8 @@ assembler-grid/
     └─── styles/
         ├── assembler-grid.css
         ├── assembler-grid.css.map
-        └── assembler-grid.min.css
+        ├── assembler-grid.min.css
+        └── assembler-grid.min.css.map
 ```
 
 Provided are compiled CSS (`assembler-grid.*`). CSS [source maps](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors)
