@@ -15,8 +15,7 @@
     "mobile-first"
   ],
   "main": [
-    "./dist/styles/assembler-grid.css",
-    "./dist/styles/assembler-grid.min.css"
+    "./dist/styles/assembler-grid.css"
   ],
   "maintainers": [
     "Chris Newton (chrisohpedia@gmail.com) (http://chrisnewton.me/about)"

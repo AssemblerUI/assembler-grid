@@ -1,6 +1,9 @@
 {
   "name": "assembler-grid",
   "description": "A grid component built for the Assembler framework",
+  "authors": [
+    "Chris Newton <chrisohpedia@gmail.com> (http://chrisnewton.me/about)"
+  ],
   "version": "0.1.0",
   "keywords": [
     "responsive",
@@ -13,6 +16,14 @@
     "component",
     "mobile-first"
   ],
+  "main": [
+    "dist/styles/assembler-grid.css"
+  ],
+  "homepage": "https://chrisopedia.github.io/assembler-grid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisopedia/assembler-grid.git"
+  },
   "license": "MIT",
   "ignore": [
     "/.*",
