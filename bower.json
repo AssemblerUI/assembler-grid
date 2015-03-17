@@ -1,0 +1,32 @@
+{
+  "name": "assembler-grid",
+  "description": "A grid component built for the Assembler framework",
+  "version": "0.1.0",
+  "keywords": [
+    "responsive",
+    "fixed-width",
+    "flex-box",
+    "fluid",
+    "css",
+    "sass",
+    "grid",
+    "component",
+    "mobile-first"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "/.*",
+    "node_modules",
+    "bower_components",
+    "docs",
+    "tasks",
+    "_config.yml",
+    "browserlist",
+    "Gemfile",
+    "Gemfile.lock",
+    "Gruntfile.js",
+    "CONTRIBUTING.md",
+    "OWNERS.md",
+    "component.json"
+  ]
+}
