@@ -1,7 +1,7 @@
 {
   "name": "assembler-grid",
   "description": "A grid component built for the assembler framework",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "keywords": [
     "responsive",
     "fixed-width",
@@ -14,13 +14,11 @@
     "mobile-first"
   ],
   "main": [
-    "./dist/styles/assembler-grid.css",
-    "./dist/styles/assembler-grid.min.css"
+    "./dist/styles/assembler-grid.css"
   ],
   "styles": [
     [
-      "./dist/styles/assembler.css",
-      "./dist/styles/assembler.min.css"
+      "./dist/styles/assembler.css"
     ]
   ],
   "demo": "https://chrisopedia.github.io/assembler-grid",
