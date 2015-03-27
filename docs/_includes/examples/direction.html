@@ -5,9 +5,24 @@
 		<div column><div class="box"></div></div>
 	{% endfor %}
 </div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters" grid-direction="row">
+    <div column>...</div>
+    <div column>...</div>
+    <div column>...</div>
+</div>
+{% endhighlight %}
+
 <h4>Column</h4>
 <div class="grid" grid-spacing="gutters" grid-direction="column">
 	{% for i in (1..3) %}
 		<div column><div class="box"></div></div>
 	{% endfor %}
 </div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters" grid-direction="column">
+    <div column>...</div>
+    <div column>...</div>
+    <div column>...</div>
+</div>
+{% endhighlight %}
