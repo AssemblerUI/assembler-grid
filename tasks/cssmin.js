@@ -7,9 +7,13 @@ module.exports = function( grunt ) {
 		options : {
 			sourceMap : true
 		},
-		dist : {
-			src : '<%= dir.dist %>/styles/<%= pkg.name %>.css',
-			dest : '<%= dir.dist %>/styles/<%= pkg.name %>.min.css'
+		fluid : {
+			src : '<%= dir.dist %>/<%= pkg.name %>.fluid.css',
+			dest : '<%= dir.dist %>/<%= pkg.name %>.fluid.min.css'
+		},
+		flexbox : {
+			src : '<%= dir.dist %>/<%= pkg.name %>.flexbox.css',
+			dest : '<%= dir.dist %>/<%= pkg.name %>.flexbox.min.css'
 		}
 	});
 };

@@ -8,7 +8,7 @@ module.exports = function( grunt ) {
 			map : true
 		},
 		dist : {
-			src : '<%= dir.dist %>/styles/*.css'
+			src : '<%= dir.dist %>/*.css'
 		}
 	});
 };

@@ -12,13 +12,6 @@ module.exports = function( grunt ) {
 					filter : 'isFile',
 					src : '<%= dir.dist %>/styles/*',
 					dest : '<%= dir.docs %>/styles'
-				},
-				{
-					expand : true,
-					flatten : true,
-					filter : 'isFile',
-					src : '<%= dir.dist %>/scripts/*',
-					dest : '<%= dir.docs %>/scripts'
 				}
 			]
 		}

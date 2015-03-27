@@ -34,16 +34,15 @@ module.exports = function( grunt ) {
 		'browserSync',
 		'watch'
 	]);
-	grunt.registerTask( 'dev', [
-		'build',
-		'copy',
-		'serve'
-	]);
-	grunt.registerTask( 'deploy', [
-		'build',
+	grunt.registerTask( 'dist', [
 		'copy',
 		'autoprefixer',
 		'cssmin'
+	]);
+	grunt.registerTask( 'dev', [
+		'build',
+		'dist',
+		'serve'
 	]);
 	grunt.registerTask( 'default', [ 'dev' ]);
 };
