@@ -1,0 +1,37 @@
+@mixin grid-responsive( $style ) {
+	/* ======================================================== */
+	/*                         RESPONSIVE                       */
+	/* ======================================================== */
+
+	/*
+	 * mobile support => stack them by default
+	 * tablet support => 8 2 2 for columns
+	 * laptop support => 6 4 2 for columns
+	 * desktop support => 2 8 1 for columns
+	 * presentation support => 0 12 0 for columns
+	 *
+	 * <div class="grid" grid-spacing="gutters between">
+	 *   <div column="12 small="8" medium="6" large="3" xlarge="0" />
+	 *   <div column="12 small="2" medium="4" large="8" xlarge="12" />
+	 *   <div column="12 small="4" medium="2" large="1" xlarge="0" />
+	 * </div>
+	 */
+	@each $key, $value in $breakpoints {
+		@include respond-to( $key ) {
+			[#{$key}="0"] {
+				display: none;
+			}
+			@for $i from 1 through 12 {
+				$percentage: $i/12;
+				[#{$key}~="#{$i}"] {
+					@if $style == 'fluid' {
+						width: percentage( $percentage );
+					} @else {
+						flex-basis: percentage( $percentage );
+						max-width: percentage( $percentage );
+					}
+				}
+			}
+		}
+	}
+}

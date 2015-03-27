@@ -1,0 +1,23 @@
+@mixin supports( $args ) {
+	@supports( prop:value ) {
+			/* more styles */
+	}
+	@supports not ( display: flex ) {
+		div { float: left; } /* alternative styles */
+	}
+	/* and and or */
+	@supports ((display: -webkit-flex) or (display: -moz-flex) or (display: flex)) and (-webkit-appearance: caret) {
+		/* use styles here */
+	}
+}
+/* example usage - best for grid systems/layout */
+[column] {
+	float: left;
+}
+
+@supports (display: -webkit-flex) or (display: -moz-flex) or (display: flex) {
+	[column] {
+		display: flex;
+		float: none;
+	}
+}

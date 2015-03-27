@@ -1,0 +1,18 @@
+@mixin grid-direction() {
+	/* ======================================================== */
+	/*                         DIRECTION                        */
+	/* ======================================================== */
+
+	/*
+	 * All of the following settings are set on the row/parent
+	 * of the columns.
+	 */
+	[grid-direction="row"] {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	[grid-direction="column"] {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+}

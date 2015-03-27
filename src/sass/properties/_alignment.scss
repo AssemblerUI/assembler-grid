@@ -1,11 +1,12 @@
-/* ======================================================== */
-/*                         ALIGNMENT                        */
-/* ======================================================== */
-/*
- * All of the following settings can be set on the row/parent
- * of the columns, or the children
- */
-@if $grid-style == 'flexbox' {
+@mixin grid-alignment() {
+	/* ======================================================== */
+	/*                         ALIGNMENT                        */
+	/* ======================================================== */
+
+	/*
+	 * All of the following settings can be set on the row/parent
+	 * of the columns, or the children
+	 */
 	[grid-alignment="top"] {
 		align-items: flex-start;
 	}

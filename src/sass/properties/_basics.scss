@@ -1,0 +1,91 @@
+@mixin grid-basics( $style: 'fluid' ) {
+	/* ======================================================== */
+	/*                         THE BASICS                       */
+	/* ======================================================== */
+
+	/*
+	 * parent container to signify its a Grid
+	 * this is synonymous for a row, or collection of columns
+	 * there is no need to specify a parent class on the entire
+	 * page or page container
+	 */
+	.grid {
+		box-sizing: border-box;
+
+		@if $style == 'fluid' {
+			overflow: hidden;
+		} @else {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			flex: 0 1 auto;
+		}
+	}
+	/*
+	 * the child attribute selector
+	 * can be an empty attribute to allow for auto-sizing or
+	 * include the subdivision of units as per the $column
+	 * setting at the top
+	 * this means if you want a column that is 1/2 the
+	 * parent width, and the $columns is set to the default
+	 * of 12, then you'd set the attribute to 6 (12 columns / 2)
+	 */
+	[column],
+	[prefix],
+	[suffix],
+	[push],
+	[pull] {
+		box-sizing: border-box;
+
+		@if $style == 'fluid' {
+			float: left;
+		} @else {
+			display: flex;
+			flex-basis: 0%;
+			flex-direction: column;
+			flex-grow: 1;
+			flex-shrink: 0;
+		}
+	}
+	[push],
+	[pull] {
+		position: relative;
+	}
+
+	/*
+	 * If you want to hide a column, then set the unit to '0'
+	 * and it won't show on the default mobile view.  This can
+	 * be overridden on any other responsive view
+	 */
+	[column="0"] {
+		display: none;
+	}
+
+	/*
+	 * loop through the grid columns setting to create the
+	 * percentages necessary to divide the page up evenly
+	 */
+	@for $i from 1 through $columns {
+		$percentage: $i/$columns;
+		[column~="#{$i}"] {
+			@if $style == 'fluid' {
+				width: percentage( $percentage );
+			} @else {
+				flex-basis: percentage( $percentage );
+				max-width: percentage( $percentage );
+			}
+		}
+		[prefix~="#{$i}"] {
+			margin-left: percentage( $percentage );
+		}
+		[suffix~="#{$i}"] {
+			margin-right: percentage( $percentage );
+		}
+		[push~="#{$i}"] {
+			left: percentage( $percentage );
+		}
+		[pull~="#{$i}"] {
+			left: percentage( $percentage * -1 );
+		}
+	}
+}
