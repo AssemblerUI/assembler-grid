@@ -2,7 +2,7 @@
   "name": "assembler-grid",
   "description": "A grid component built for the Assembler framework",
   "author": "Chris Newton <chrisohpedia@gmail.com> (http://chrisnewton.me/about)",
-  "version": "0.1.4",
+  "version": "0.2.1",
   "keywords": [
     "responsive",
     "fixed-width",
@@ -15,7 +15,14 @@
     "mobile-first"
   ],
   "main": [
-    "./dist/styles/assembler-grid.css"
+    "./dist/assembler-grid.flexbox.css",
+    "./dist/assembler-grid.flexbox.css.map",
+    "./dist/assembler-grid.flexbox.min.css",
+    "./dist/assembler-grid.flexbox.min.css.map",
+    "./dist/assembler-grid.fluid.css",
+    "./dist/assembler-grid.fluid.css.map",
+    "./dist/assembler-grid.fluid.min.css",
+    "./dist/assembler-grid.fluid.min.css.map"
   ],
   "maintainers": [
     "Chris Newton (chrisohpedia@gmail.com) (http://chrisnewton.me/about)"
@@ -40,6 +47,8 @@
     "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jekyll": "^0.4.2",
+    "grunt-phantomcss": "file:../../../../../var/folders/0y/l68b8szn5016zrzkb1zcgq083tcs1d/T/npm-35691-c5ea0b84/git-cache-4499b1dd7985/2112d7456d2c0d33e414a5597de003ea2bc7bc2c",
+    "phantomjs": "^1.9.7-14",
     "time-grunt": "^1.1.0"
   }
 }

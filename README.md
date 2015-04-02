@@ -29,11 +29,14 @@ You'll see something like this:
 ```
 assembler-grid/
 └── dist/
-    └─── styles/
-        ├── assembler-grid.css
-        ├── assembler-grid.css.map
-        ├── assembler-grid.min.css
-        └── assembler-grid.min.css.map
+    ├── assembler-grid.flexbox.css
+    ├── assembler-grid.flexbox.css.map
+    ├── assembler-grid.flexbox.min.css
+    ├── assembler-grid.flexbox.min.css.map
+    ├── assembler-grid.fluid.css
+    ├── assembler-grid.fluid.css.map
+    ├── assembler-grid.fluid.min.css
+    └── assembler-grid.fluid.min.css.map
 ```
 
 Provided are compiled CSS (`assembler-grid.*`). CSS [source maps](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors)

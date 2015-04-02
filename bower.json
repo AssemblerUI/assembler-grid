@@ -4,7 +4,7 @@
   "authors": [
     "Chris Newton <chrisohpedia@gmail.com> (http://chrisnewton.me/about)"
   ],
-  "version": "0.1.4",
+  "version": "0.2.1",
   "keywords": [
     "responsive",
     "fixed-width",
@@ -17,7 +17,14 @@
     "mobile-first"
   ],
   "main": [
-    "dist/styles/assembler-grid.css"
+    "./dist/assembler-grid.flexbox.css",
+    "./dist/assembler-grid.flexbox.css.map",
+    "./dist/assembler-grid.flexbox.min.css",
+    "./dist/assembler-grid.flexbox.min.css.map",
+    "./dist/assembler-grid.fluid.css",
+    "./dist/assembler-grid.fluid.css.map",
+    "./dist/assembler-grid.fluid.min.css",
+    "./dist/assembler-grid.fluid.min.css.map"
   ],
   "homepage": "https://chrisopedia.github.io/assembler-grid",
   "repository": {
