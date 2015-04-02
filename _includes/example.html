@@ -1,0 +1,17 @@
+<h2>{{ page.title }}</h2>
+<p>{{ page.description }}</p>
+
+{% include examples/responsive.html %}
+{% if page.class == 'flexbox' %}
+	{% include examples/autosize.html %}
+{% endif %}
+{% include examples/offsets.html %}
+{% include examples/push-pull.html %}
+{% include examples/spacing.html %}
+{% if page.class == 'flexbox' %}
+	{% include examples/direction.html %}
+	{% include examples/order.html %}
+	{% include examples/alignment.html %}
+{% endif %}
+{% include examples/nested.html %}
+{% include examples/two-column.html %}

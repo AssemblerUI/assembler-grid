@@ -1,0 +1,15 @@
+<h2>Offsets</h2>
+<h3>Pre/Post</h3>
+<div class="grid" grid-spacing="gutters">
+	{% for i in (1..12) %}
+		<div column="1" prefix="{{12 | minus:i}}" suffix="{{i}}"><div class="box"></div></div>
+	{% endfor %}
+</div>
+
+{% highlight html %}
+<div class="grid" grid-spacing="gutters">
+{% for i in (1..12) %}
+    <div column="1" prefix="{{12 | minus:i}}" suffix="{{i}}">...</div>
+{% endfor %}
+</div>
+{% endhighlight %}

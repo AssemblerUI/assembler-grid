@@ -1,0 +1,120 @@
+<h3>Alignment</h3>
+<h4>Top row</h4>
+<div class="grid" grid-spacing="gutters" grid-alignment="top">
+	<div column="4"><div class="box large"></div></div>
+	<div column="4"><div class="box"></div></div>
+	<div column="4"><div class="box"></div></div>
+</div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters" grid-alignment="top">
+    <div column="4">...</div>
+    <div column="4">...</div>
+    <div column="4">...</div>
+</div>
+{% endhighlight %}
+
+<h4>Middle row</h4>
+<div class="grid" grid-spacing="gutters" grid-alignment="middle">
+	<div column="4"><div class="box large"></div></div>
+	<div column="4"><div class="box"></div></div>
+	<div column="4"><div class="box"></div></div>
+</div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters" grid-alignment="middle">
+    <div column="4">...</div>
+    <div column="4">...</div>
+    <div column="4">...</div>
+</div>
+{% endhighlight %}
+
+<h4>Bottom row</h4>
+<div class="grid" grid-spacing="gutters" grid-alignment="bottom">
+	<div column="4"><div class="box large"></div></div>
+	<div column="4"><div class="box"></div></div>
+	<div column="4"><div class="box"></div></div>
+</div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters" grid-alignment="bottom">
+    <div column="4">...</div>
+    <div column="4">...</div>
+    <div column="4">...</div>
+</div>
+{% endhighlight %}
+
+<h4>Start row</h4>
+<div class="grid" grid-spacing="gutters" grid-alignment="start">
+	{% for i in (1..3) %}
+		<div column="2"><div class="box"></div></div>
+	{% endfor %}
+</div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters" grid-alignment="start">
+    <div column="2">...</div>
+    <div column="2">...</div>
+    <div column="2">...</div>
+</div>
+{% endhighlight %}
+
+<h4>Center row</h4>
+<div class="grid" grid-spacing="gutters" grid-alignment="center">
+	{% for i in (1..3) %}
+		<div column="2"><div class="box"></div></div>
+	{% endfor %}
+</div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters" grid-alignment="center">
+    <div column="2">...</div>
+    <div column="2">...</div>
+    <div column="2">...</div>
+</div>
+{% endhighlight %}
+
+<h4>End row</h4>
+<div class="grid" grid-spacing="gutters" grid-alignment="end">
+	{% for i in (1..3) %}
+		<div column="2"><div class="box"></div></div>
+	{% endfor %}
+</div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters" grid-alignment="end">
+    <div column="2">...</div>
+    <div column="2">...</div>
+    <div column="2">...</div>
+</div>
+{% endhighlight %}
+
+<h4>Top column</h4>
+<div class="grid" grid-spacing="gutters">
+	<div column="6"><div class="box large"></div></div>
+	<div column="6" alignment="top"><div class="box"></div></div>
+</div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters">
+    <div column="6">...</div>
+    <div column="6" alignment="top">...</div>
+</div>
+{% endhighlight %}
+
+<h4>Middle column</h4>
+<div class="grid" grid-spacing="gutters">
+	<div column="6"><div class="box large"></div></div>
+	<div column="6" alignment="middle"><div class="box"></div></div>
+</div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters">
+    <div column="6">...</div>
+    <div column="6" alignment="middle">...</div>
+</div>
+{% endhighlight %}
+
+<h4>Bottom column</h4>
+<div class="grid" grid-spacing="gutters">
+	<div column="6"><div class="box large"></div></div>
+	<div column="6" alignment="bottom"><div class="box"></div></div>
+</div>
+{% highlight html %}
+<div class="grid" grid-spacing="gutters">
+    <div column="6">...</div>
+    <div column="6" alignment="bottom">...</div>
+</div>
+{% endhighlight %}

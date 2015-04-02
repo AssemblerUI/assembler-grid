@@ -1,0 +1,9 @@
+# Permalinks
+permalink: pretty
+
+highlighter: pygments
+kramdown:
+  input: GFM
+
+gems:
+  - jekyll-sitemap
