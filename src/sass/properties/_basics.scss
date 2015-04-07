@@ -41,7 +41,7 @@
 			float: left;
 		} @else {
 			display: flex;
-			flex-basis: 0%;
+			flex-basis: 0;
 			flex-direction: column;
 			flex-grow: 1;
 			flex-shrink: 0;

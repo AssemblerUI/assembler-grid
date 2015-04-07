@@ -13,8 +13,8 @@ module.exports = function( grunt ) {
 				update : true
 			},
 			files : {
-				'<%= dir.dist %>/<%= pkg.name %>.flexbox.css' : '<%= dir.src %>/flexbox-grid.scss',
-				'<%= dir.dist %>/<%= pkg.name %>.fluid.css' : '<%= dir.src %>/fluid-grid.scss'
+				'<%= dir.dist %>/<%= pkg.name %>.flexbox.css' : '<%= dir.src %>/<%= pkg.name %>.flexbox.scss',
+				'<%= dir.dist %>/<%= pkg.name %>.fluid.css' : '<%= dir.src %>/<%= pkg.name %>.fluid.scss'
 			}
 		}
 	});
