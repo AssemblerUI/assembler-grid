@@ -14,5 +14,5 @@ PreCommit:
       - 'package.json'
   HardTabs:
     exclude:
-      - '/**'
+      - '*'
 
