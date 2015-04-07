@@ -45,6 +45,7 @@
     "Gruntfile.js",
     "CONTRIBUTING.md",
     "OWNERS.md",
-    "component.json"
+    "component.json",
+    "package.json"
   ]
 }
