@@ -47,7 +47,6 @@
     "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jekyll": "^0.4.2",
-    "grunt-phantomcss": "file:../../../../../var/folders/0y/l68b8szn5016zrzkb1zcgq083tcs1d/T/npm-35691-c5ea0b84/git-cache-4499b1dd7985/2112d7456d2c0d33e414a5597de003ea2bc7bc2c",
     "phantomjs": "^1.9.7-14",
     "time-grunt": "^1.1.0"
   }
