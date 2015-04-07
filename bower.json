@@ -26,10 +26,10 @@
     "./dist/assembler-grid.fluid.min.css",
     "./dist/assembler-grid.fluid.min.css.map"
   ],
-  "homepage": "https://chrisopedia.github.io/assembler-grid",
+  "homepage": "https://assemblerui.github.io/assembler-grid",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrisopedia/assembler-grid.git"
+    "url": "https://github.com/AssemblerUI/assembler-grid.git"
   },
   "license": "MIT",
   "ignore": [

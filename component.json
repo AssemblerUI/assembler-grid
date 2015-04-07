@@ -35,6 +35,6 @@
     "./dist/assembler-grid.fluid.min.css.map"
     ]
   ],
-  "demo": "https://chrisopedia.github.io/assembler-grid",
+  "demo": "https://assemblerui.github.io/assembler-grid",
   "license": "MIT"
 }
