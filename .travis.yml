@@ -1,0 +1,10 @@
+language: node_js
+git:
+  depth: 10
+node_js:
+  - "0.12"
+install:
+  - npm install -g grunt-cli
+env:
+  global:
+    - JEKYLL_VERSION="2.5.3"

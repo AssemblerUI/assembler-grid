@@ -1,0 +1,15 @@
+// settings
+$gutter: 1rem;
+$gutter-spacing: ( $gutter / 2 );
+$gutter-compensation: -$gutter-spacing;
+$columns: 12;
+
+// responsive breakpoints
+$breakpoints: (
+	xsmall : 319px,
+	small : 479px,
+	medium : 767px,
+	large : 992px,
+	xlarge : 1223px,
+	xxlarge : 1823px,
+);

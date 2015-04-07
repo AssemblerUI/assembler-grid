@@ -1,0 +1,289 @@
+/* ======================================================== */
+/*                         THE BASICS                       */
+/* ======================================================== */
+
+/*
+ * parent container to signify its a Grid
+ * this is synonymous for a row, or collection of columns
+ * there is no need to specify a parent class on the entire
+ * page or page container
+ */
+.grid {
+	box-sizing: border-box;
+	max-width: $fixed-width;
+	overflow: hidden;
+}
+/*
+ * the child attribute selector
+ * can be an empty attribute to allow for auto-sizing or
+ * include the subdivision of units as per the $column
+ * setting at the top
+ * this means if you want a column that is 1/2 the
+ * parent width, and the $columns is set to the default
+ * of 12, then you'd set the attribute to 6 (12 columns / 2)
+ */
+[column],
+[prefix],
+[suffix],
+[push],
+[pull] {
+	box-sizing: border-box;
+	overflow: hidden;
+	float: left;
+}
+[push],
+[pull] {
+	position: relative;
+}
+
+/*
+ * If you want to hide a column, then set the unit to '0'
+ * and it won't show on the default mobile view.  This can
+ * be overridden on any other responsive view
+ */
+[column="0"] {
+	display: none;
+}
+
+/*
+ * loop through the grid columns setting to create the
+ * percentages necessary to divide the page up evenly
+ */
+@for $i from 1 through $columns {
+	$percentage: $fixed-width/$columns;
+	[column~="#{$i}"] {
+		width: $percentage * $i;
+	}
+	[prefix~="#{$i}"] {
+		margin-left: $percentage * $i;
+	}
+	[suffix~="#{$i}"] {
+		margin-right: $percentage * $i;
+	}
+	[push~="#{$i}"] {
+		left: $percentage * $i;
+	}
+	[pull~="#{$i}"] {
+		left: $percentage * -$i;
+	}
+}
+
+/* ======================================================== */
+/*                          SPACING                         */
+/* ======================================================== */
+/*
+ * All of the following settings are set on the row/parent
+ * of the columns.
+ */
+
+/*
+ * gives you calculated spacing around each column
+ */
+[grid-spacing~="gutters"] {
+	margin-right: $gutter-compensation;
+	margin-left: $gutter-compensation;
+	> [column] {
+		margin-right: $gutter-spacing;
+		margin-left: $gutter-spacing;
+	}
+}
+/*
+ * this is not required but available in case you need
+ * to reset spacing on a nested grid or something
+ */
+[grid-spacing="none"] > [column] {
+	margin-right: 0;
+	margin-left: 0;
+}
+/*
+ * provided for situations where you have floating columns
+ * such as in a 12 grid system, and you have only enough
+ * content boxes to fill 6 columns, you might want them
+ * evenly spaced out, this provides spacing on both sides
+ * of each column
+ */
+[grid-spacing="even"] > [column] {
+	justify-content: space-around;
+}
+/*
+ * provided for situations where you have floating columns
+ * such as in a 12 grid system, and you have only enough
+ * content boxes to fill 6 columns, you might want them
+ * evenly spaced out, this only provides spacing in between
+ * the columns, leaving the first and last columns flush
+ */
+[grid-spacing="justify"] > [column] {
+	justify-content: space-between;
+}
+
+/* ======================================================== */
+/*                         DIRECTION                        */
+/* ======================================================== */
+/*
+ * All of the following settings are set on the row/parent
+ * of the columns.
+ */
+
+[grid-direction="row"] {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+[grid-direction="column"] {
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+/* ======================================================== */
+/*                           ORDER                          */
+/* ======================================================== */
+/*
+ * All of the following settings are set on the row/parent
+ * of the columns.
+ */
+
+/*
+ * Reverse order of the row
+ */
+[grid-order="reverse"] {
+	flex-direction: row-reverse;
+	flex-wrap: wrap-reverse;
+}
+[grid-direction="column"][grid-order="reverse"] {
+	flex-direction: column-reverse;
+}
+/*
+ * Reset the order back to normal
+ */
+[grid-order="forward"] {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+[grid-direction="column"][grid-order="forward"] {
+	flex-direction: column;
+}
+
+/* @TODO: support different devices sizes
+ * so you can have a different item show up first or last
+ */
+
+/*
+ * used on the column
+ * allows you to move any item to the first in the list
+ */
+[order="first"] {
+	order: -1;
+}
+/*
+ * used on the column
+ * allows you to move any item to the last in the list
+ */
+[order="last"] {
+	order: 1;
+}
+
+/* ======================================================== */
+/*                         ALIGNMENT                        */
+/* ======================================================== */
+/*
+ * All of the following settings can be set on the row/parent
+ * of the columns, or the children
+ */
+[grid-alignment="top"] {
+	align-items: flex-start;
+}
+[grid-alignment="middle"] {
+	align-items: center;
+}
+[grid-alignment="bottom"] {
+	align-items: flex-end;
+}
+[grid-alignment="baseline"] {
+	align-items: baseline;
+}
+[grid-alignment="stretch"] {
+	align-items: stretch;
+}
+[grid-alignment="start"] {
+	justify-content: flex-start;
+	text-align: flex-start;
+}
+[grid-alignment="center"] {
+	justify-content: center;
+	text-align: center;
+}
+[grid-alignment="end"] {
+	justify-content: flex-end;
+	text-align: flex-end;
+}
+[alignment="top"] {
+	align-self: flex-start;
+}
+[alignment="middle"] {
+	align-self: center;
+}
+[alignment="bottom"] {
+	align-self: flex-end;
+}
+[alignment="baseline"] {
+	align-self: baseline;
+}
+[alignment="stretch"] {
+	align-self: stretch;
+}
+
+/* ======================================================== */
+/*                         RESPONSIVE                       */
+/* ======================================================== */
+/*
+ * mobile support => stack them by default
+ * tablet support => 8 2 2 for columns
+ * laptop support => 6 4 2 for columns
+ * desktop support => 2 8 1 for columns
+ * presentation support => 0 12 0 for columns
+ *
+ * <div class="grid" grid-spacing="gutters between">
+ *   <div column="12 small="8" medium="6" large="3" xlarge="0" />
+ *   <div column="12 small="2" medium="4" large="8" xlarge="12" />
+ *   <div column="12 small="4" medium="2" large="1" xlarge="0" />
+ * </div>
+ */
+@each $key, $value in $breakpoints {
+	@include respond-to( $key ) {
+		[#{$key}="0"] {
+			display: none;
+		}
+		@for $i from 1 through 12 {
+			$percentage: $i/12;
+			[#{$key}~="#{$i}"] {
+				flex-basis: percentage( $percentage );
+				max-width: percentage( $percentage );
+			}
+		}
+	}
+}
+
+/* get border tables */
+[grid-spacing~="border"] {
+	> [column] {
+		position: relative;
+		padding-right: $gutter;
+		padding-left: $gutter;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 1px;
+			height: 100%;
+			background-color: black;
+			content: '';
+		}
+	}
+	[column="12"]::after,
+	[column="6"]:nth-of-type(2)::after,
+	[column="4"]:nth-of-type(3)::after {
+		content: none;
+	}
+}
+
+

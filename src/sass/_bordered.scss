@@ -1,0 +1,23 @@
+/* get border tables */
+[grid-spacing~="border"] {
+	> [column] {
+		position: relative;
+		padding-right: $gutter;
+		padding-left: $gutter;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 1px;
+			height: 100%;
+			background-color: black;
+			content: '';
+		}
+	}
+	[column="12"]::after,
+	[column="6"]:nth-of-type(2)::after,
+	[column="4"]:nth-of-type(3)::after {
+		content: none;
+	}
+}

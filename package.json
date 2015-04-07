@@ -1,0 +1,53 @@
+{
+  "name": "assembler-grid",
+  "description": "A grid component built for the Assembler framework",
+  "author": "Chris Newton <chrisohpedia@gmail.com> (http://chrisnewton.me/about)",
+  "version": "0.2.2",
+  "keywords": [
+    "responsive",
+    "fixed-width",
+    "flex-box",
+    "fluid",
+    "css",
+    "sass",
+    "grid",
+    "component",
+    "mobile-first"
+  ],
+  "main": [
+    "./dist/assembler-grid.flexbox.css",
+    "./dist/assembler-grid.flexbox.css.map",
+    "./dist/assembler-grid.flexbox.min.css",
+    "./dist/assembler-grid.flexbox.min.css.map",
+    "./dist/assembler-grid.fluid.css",
+    "./dist/assembler-grid.fluid.css.map",
+    "./dist/assembler-grid.fluid.min.css",
+    "./dist/assembler-grid.fluid.min.css.map"
+  ],
+  "maintainers": [
+    "Chris Newton (chrisohpedia@gmail.com) (http://chrisnewton.me/about)"
+  ],
+  "bugs": {
+    "url": "https://github.com/AssemblerUI/assembler-grid/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/AssemblerUI/assembler-grid/blob/master/LICENSE.md"
+  },
+  "devDependencies": {
+    "bower": "^1.3.9",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.2.0",
+    "grunt-browser-sync": "^2.0.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-copy": "^0.6.0",
+    "grunt-contrib-cssmin": "^0.12.1",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jekyll": "^0.4.2",
+    "phantomjs": "^1.9.7-14",
+    "time-grunt": "^1.1.0"
+  }
+}

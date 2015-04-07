@@ -1,0 +1,27 @@
+@import 'configuration/breakpoints';
+@import 'mixins/respond-to';
+
+@import 'properties/basics';
+@import 'properties/spacing';
+@import 'properties/direction';
+@import 'properties/order';
+@import 'properties/alignment';
+@import 'properties/responsive';
+
+
+@mixin grid( $style: 'fluid' ) {
+	$styles: fluid flexbox;
+
+	@if not index( $styles, $style ) {
+		@warn 'style must be one of `fluid` or `flexbox`; currently `#{style}`.';
+	} @else {
+		@include grid-basics( $style );
+		@include grid-spacing( $style );
+		@if $style == flexbox {
+			@include grid-direction();
+			@include grid-order();
+			@include grid-alignment();
+		}
+	}
+	@include grid-responsive( $style );
+}

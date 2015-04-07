@@ -1,0 +1,51 @@
+{
+  "name": "assembler-grid",
+  "description": "A grid component built for the Assembler framework",
+  "authors": [
+    "Chris Newton <chrisohpedia@gmail.com> (http://chrisnewton.me/about)"
+  ],
+  "version": "0.2.2",
+  "keywords": [
+    "responsive",
+    "fixed-width",
+    "flex-box",
+    "fluid",
+    "css",
+    "sass",
+    "grid",
+    "component",
+    "mobile-first"
+  ],
+  "main": [
+    "./dist/assembler-grid.flexbox.css",
+    "./dist/assembler-grid.flexbox.css.map",
+    "./dist/assembler-grid.flexbox.min.css",
+    "./dist/assembler-grid.flexbox.min.css.map",
+    "./dist/assembler-grid.fluid.css",
+    "./dist/assembler-grid.fluid.css.map",
+    "./dist/assembler-grid.fluid.min.css",
+    "./dist/assembler-grid.fluid.min.css.map"
+  ],
+  "homepage": "https://assemblerui.github.io/assembler-grid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AssemblerUI/assembler-grid.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    "/.*",
+    "node_modules",
+    "bower_components",
+    "docs",
+    "tasks",
+    "_config.yml",
+    "browserlist",
+    "Gemfile",
+    "Gemfile.lock",
+    "Gruntfile.js",
+    "CONTRIBUTING.md",
+    "OWNERS.md",
+    "component.json",
+    "package.json"
+  ]
+}
