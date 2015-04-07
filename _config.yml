@@ -7,3 +7,5 @@ kramdown:
 
 gems:
   - jekyll-sitemap
+
+current_version: 0.2.1
