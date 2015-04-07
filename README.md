@@ -95,9 +95,11 @@ for setting up Jekyll for use with Github pages.  I've outlined the basics below
 
 1. [Install Ruby](https://www.ruby-lang.org/en/downloads/), if you don't already have it. Should be version `1.9.3` or better.
 2. [Install Bundler](http://bundler.io/) via `gem install bundler`.
-3. [Install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.5.x). Run `bundle install` from the root directory.
-4. Change into the `/assembler-grid` directory and run `grunt dev` in the command line.
-5. Open <http://127.0.0.1:8000> in your browser.
+3. [Install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.5.x).
+4. Change into the `/assembler-grid` directory
+5. Run `bundle install` from the root directory.
+6. Run `grunt dev` in the command line.
+7. It should open up the browser for you, but if it doesn't, open <http://localhost:3000> in your browser.
 
 :exclamation: **Note Windows users:** Read [this unofficial guide](http://jekyll-windows.juthilo.com/) to get Jekyll up and running without problems.
 
@@ -109,6 +111,14 @@ before getting started.
 
 Editor preferences are available in the [editor config](https://github.com/AssemblerUI/assembler-grid/blob/master/.editorconfig)
 for use in common text editors. Read more and download plugins at <http://editorconfig.org>.
+
+### Getting Started
+
+1. Clone the repo: `git clone https://github.com/AssemblerUI/assembler-grid.git`.
+2. `cd assembler-grid`
+3. Install documentation gems: `bundle install`
+4. Install grunt build dependencies: `npm install`
+5. Start the build process: `grunt dev`
 
 ## Copyright
 
