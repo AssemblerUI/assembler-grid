@@ -71,6 +71,11 @@
 				font-weight: 400;
 				text-align: center;
 			}
+			.subheader {
+				margin-top: -.9em;
+				font-weight: 300;
+				text-align: center;
+			}
 			.two-column h4 {
 				text-align: center;
 				color: rgb(255,255,255);
@@ -90,7 +95,7 @@
 	<body>
 		<a class="sr-only sr-only-focusable" href="#main"><span class="skiplink-text">Skip to main content</span></a>
 		<h1 id="header">Assembler Grid</h1>
-		<h2>{{ site.github.project_tagline }}</h2>
+		<h2 class="subheader">{{ site.github.project_tagline }}</h2>
 		<main id="main" class="{{ page.class}}" role="main" tabindex="-1">
 			{{ content }}
 		</main>
