@@ -91,9 +91,9 @@
 
 <!-- Title -->
 {% if site.github %}
-	<link rel="stylesheet" href="/styles/assembler-grid.{{ page.class }}.min.css" />
+	<link rel="stylesheet" href="{{ site.github.repository_url }}/styles/assembler-grid.{{ page.class }}.min.css" />
 {% else %}
-	<link rel="stylesheet" href="/styles/assembler-grid.{{ page.class }}.css" />
+	<link rel="stylesheet" href="{{ site.github.repository_url }}/styles/assembler-grid.{{ page.class }}.css" />
 {% endif %}
 
 <title>{{ site.github.project_title }} - {{ site.github.project_tagline }}</title>
