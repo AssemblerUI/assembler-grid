@@ -35,7 +35,6 @@ module.exports = function( grunt ) {
 		'watch'
 	]);
 	grunt.registerTask( 'dist', [
-		'copy',
 		'autoprefixer',
 		'cssmin'
 	]);
