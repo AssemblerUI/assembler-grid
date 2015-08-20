@@ -489,7 +489,7 @@
  * of the columns.
  */
 /* line 10, ../src/sass/properties/_direction.scss */
-[grid-direction="row"] {
+[grid-direction~="row"] {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -501,7 +501,7 @@
 }
 
 /* line 14, ../src/sass/properties/_direction.scss */
-[grid-direction="column"] {
+[grid-direction~="column"] {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -510,6 +510,12 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+}
+/* line 18, ../src/sass/properties/_direction.scss */
+[grid-direction~="column"] > [column] {
+  -webkit-flex-basis: inherit;
+      -ms-flex-preferred-size: inherit;
+          flex-basis: inherit;
 }
 
 /* ======================================================== */
@@ -1331,5 +1337,4 @@
     max-width: 100%;
   }
 }
-
 /*# sourceMappingURL=assembler-grid.flexbox.css.map */
