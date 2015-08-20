@@ -7,12 +7,16 @@
 	 * All of the following settings are set on the row/parent
 	 * of the columns.
 	 */
-	[grid-direction="row"] {
+	[grid-direction~="row"] {
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
-	[grid-direction="column"] {
+	[grid-direction~="column"] {
 		flex-direction: column;
 		flex-wrap: wrap;
+
+		> [column] {
+			flex-basis: inherit;
+		}
 	}
 }
