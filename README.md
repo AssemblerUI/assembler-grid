@@ -1,5 +1,7 @@
 # Assembler Grid
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/AssemblerUI/assembler-grid.svg)](https://greenkeeper.io/)
+
 A grid component built for the [Assembler framework](https://github.com/AssemblerUI/assembler).
 
 ## Table of contents
